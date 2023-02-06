@@ -10,3 +10,19 @@ def sumar(request, op1, op2):
     except:
         response = render(request, 'error.html', {'error': "Error en el tipo de dato"})
     return response
+
+def restar(request, op1, op2):
+    try:
+        context = { 'title': 'RESTA', 'result': f' {op1} - {op2} = { int(op1) - int(op2) } ' }
+        response = render(request, 'calculadora.html', context)
+    except:
+        response = render(request, 'error.html', {'error': "Error en el tipo de dato"})
+    return response
+
+def multiplicar(request, op1, op2):
+    try:
+        context = { 'title': 'MULTIPLICACIÓN', 'result': f' {op1} * {op2} = { int(op1) * int(op2) } ' }
+        response = render(request, 'calculadora.html', context)
+    except:
+        response = render(request, 'error.html', {'error': "Error en el tipo de dato"})
+    return response
