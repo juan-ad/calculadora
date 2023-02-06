@@ -3,3 +3,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+def sumar(request, op1, op2):
+    try:
+        context = { 'title': 'SUMA', 'result': f' {op1} + {op2} = { int(op1) + int(op2) }' }
+        response = render(request, 'calculadora.html', context)
+    except:
+        response = render(request, 'error.html', {'error': "Error en el tipo de dato"})
+    return response
