@@ -14,3 +14,10 @@ virtualenv env
 3 - Ejecutar el proyecto
 
 python manage.py runserver
+
+4 - Rutas
+
+localhost:8000/calculadora/sumar/2/2
+localhost:8000/calculadora/restar/2/2
+localhost:8000/calculadora/multiplicar/2/2
+localhost:8000/calculadora/dividir/2/2
